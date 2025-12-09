@@ -25,7 +25,7 @@ while FEs < MaxFEs
     XPos = XPos(idx, :);
  
     rank_scores = ((1:N)-(N+1)/2)/(N/2);  
-    k = 2 + 8*(FEs/ MaxFEs);           
+    k = 2 + 10*(FEs/ MaxFEs);           
     CR = 1./(1 + exp(-k*rank_scores));    
     
     F1 = 0.1 + 0.6*(1/(1+exp(-2.5*(1-2*(FEs/MaxFEs)))));
@@ -85,4 +85,5 @@ while FEs < MaxFEs
     if FEs >= MaxFEs, break; end
 end
 Convergence_curve=Convergence_curve(1:MaxFEs);
+
 end
