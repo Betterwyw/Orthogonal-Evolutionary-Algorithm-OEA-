@@ -21,7 +21,7 @@ while t <= Max_iter
     XPos = XPos(idx, :);
  
     rank_scores = ((1:N)-(N+1)/2)/(N/2);  
-    k = 2 + 8*(t/ Max_iter);           
+    k = 2 + 10*(t/ Max_iter);           
     CR = 1./(1 + exp(-k*rank_scores));    
     
     F1 = 0.1 + 0.6*(1/(1+exp(-2.5*(1-2*(t/Max_iter)))));
@@ -79,5 +79,6 @@ while t <= Max_iter
     Convergence_curve(t) = Best_Fitness;
     t = t+1;
 end
+
 
 end
